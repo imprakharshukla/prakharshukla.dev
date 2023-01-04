@@ -1,26 +1,18 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;500;600;700;800;900&family=Roboto+Mono:wght@100;300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.heading {
+    @apply prose text-3xl md:text-4xl font-sans font-bold dark:text-gray-50 text-gray-700 my-3;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.subheading {
+    @apply md:text-lg font-sans dark:text-gray-300 text-gray-600 prose;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.text {
+    @apply text-base md:text-lg font-sans  lg:text-xl dark:text-gray-400 text-gray-600;
 }

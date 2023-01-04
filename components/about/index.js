@@ -1,0 +1,63 @@
+import {CtaButton} from "../ctaButton";
+import {SiCodechef, SiGithub, SiLeetcode, SiLinkedin, SiTwitter} from "react-icons/si";
+
+export const About = () => {
+    return (
+        <div  id="about" className={"bg-gray-800"}>
+            <div className={"py-10 px-10"}>
+                <h1 className={"heading"}>About me <span className={"text-indigo-400"}>...</span></h1>
+                <p className={"subheading"}>I am a sophomore in Computer Science with a strong passion for technology
+                    and software development. I have experience developing Android, Web, and Hybrid apps, and I am
+                    always eager to learn and expand my skill-set. In addition to my coursework, I enjoy staying up to
+                    date with the latest tech trends and exploring new development tools and techniques in my free
+                    time. <br/> <br/> As a student, I am highly motivated and organized, with excellent communication
+                    and problem-solving abilities. I am able to work independently or as part of a team, and I am always
+                    willing to go above and beyond to ensure the success of the projects I work on. <br/>
+                    <br/>I am excited to continue growing and learning as a developer, and I am eager to see where my
+                    studies and interests in technology take me in the future.</p>
+
+                <div className={"mt-10"}>
+                    <div className={"hidden lg:block"}>
+                        <div className={"flex flex-wrap justify-start items-center space-x-3"}>
+                            <CtaButton title={"LinkedIn"} icon={SiLinkedin}/>
+                            <CtaButton title={"GitHub"} icon={SiGithub}/>
+                            <CtaButton title={"CodeChef"} icon={SiCodechef}/>
+                            <CtaButton title={"Leetcode"} icon={SiLeetcode}/>
+                            <CtaButton title={"Twitter"} icon={SiTwitter}/>
+                        </div>
+                    </div>
+
+
+                    <div className={"flex space-x-7 block justify-start items-center lg:hidden"}>
+                        <p>Connect with me:</p>
+                        <a href="">
+                            <SiLinkedin
+                                className="cursor-pointer hover:-translate-y-1 hover:text-indigo-500 transition transform ease-in-out duration-200"
+                                size={27}/>
+                        </a>
+                        <a href="">
+                            <SiGithub
+                                className="cursor-pointer hover:-translate-y-1 hover:text-indigo-500 transition transform ease-in-out duration-200"
+                                size={27}/>
+                        </a>
+                        <a href="">
+                            <SiCodechef
+                                className="cursor-pointer hover:-translate-y-1 hover:text-indigo-500 transition transform ease-in-out duration-200"
+                                size={27}/>
+                        </a>
+                        <a href="">
+                            <SiLeetcode
+                                className="cursor-pointer hover:-translate-y-1 hover:text-indigo-500 transition transform ease-in-out duration-200"
+                                size={27}/>
+                        </a>
+                        <a href="">
+                            <SiTwitter
+                                className="cursor-pointer hover:-translate-y-1 hover:text-indigo-500 transition transform ease-in-out duration-200"
+                                size={27}/>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}
