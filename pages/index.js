@@ -6,8 +6,6 @@ import {Qualifications} from "../components/qualifications";
 import {Skills} from "../components/skills";
 import fs from "fs";
 import matter from "gray-matter";
-import Link from "next/link";
-import Image from "next/image";
 import {Blog} from "../components/blog";
 import {Contact} from "../components/contact";
 
@@ -28,13 +26,11 @@ export async function getStaticProps() {
     });
 
 
-
     /*Blogs*/
     let files = fs.readdirSync('blog/content');
-    files  = files.filter((files)=> files.endsWith(".md"))
+    files = files.filter((file) => file !== "test.md")
     console.log({files})
     const posts = files.map((fileName) => {
-
         const slug = fileName.replace('.md', '');
 
         const readFile = fs.readFileSync(`blog/content/${fileName}`, 'utf-8');
