@@ -17,6 +17,7 @@ export async function getStaticProps() {
     const projectFiles = fs.readdirSync('projects/content');
     const projects = projectFiles.map((fileName) => {
 
+
         const slug = fileName.replace('.md', '');
 
         const readFile = fs.readFileSync(`projects/content/${fileName}`, 'utf-8');
@@ -29,7 +30,9 @@ export async function getStaticProps() {
 
 
     /*Blogs*/
-    const files = fs.readdirSync('blog/content');
+    let files = fs.readdirSync('blog/content');
+    files  = files.filter((files)=> files.endsWith(".md"))
+    console.log({files})
     const posts = files.map((fileName) => {
 
         const slug = fileName.replace('.md', '');
