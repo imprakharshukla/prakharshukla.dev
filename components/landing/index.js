@@ -9,7 +9,7 @@ export const Landing = () => {
                 <div className='grid grid-cols-1 md:grid-cols-2 h-screen items-center justify-center md:justify-start'>
                     <div className={"order-2 md:order-1"}>
                         <div className={"text-center md:text-start"}>
-                            <div xyz="fade left-100%" xyz="fade up stagger ease-in-out delay-10"
+                            <div xyz="fade up stagger ease-in-out delay-10"
                                  className='font-sans space-y-4 font-sans text-5xl tracking-wide font-extrabold text-white sm:text-7xl md:text-6xl mt-10 md:mt-0 lg:text-6xl'>
                                 <p className='text-gray-200 xyz-nested'>Hi 👋🏻! I am</p>
                                 <p xyz="fade left-100% xyz-nested" className=''>Prakhar</p>
@@ -27,7 +27,8 @@ export const Landing = () => {
                         </div>
                     </div>
                     <div className={"p-12 order-1 md:order-2"}>
-                        <img className={"object-cover max-w-sm w-5/6 lg:w-5/6 md:w-3/4 "} src={"/images/landing_dp.png"}/>
+                        <img className={"object-cover max-w-sm w-5/6 lg:w-5/6 md:w-3/4 "}
+                             src={"/images/landing_dp.png"}/>
                     </div>
                 </div>
             </div>
