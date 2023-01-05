@@ -157,7 +157,7 @@ export const Skills = () => {
     return (
         <div className={"bg-gray-900"}  id="skills">
             <div className={"py-10 px-10"}>
-                <h1 className={"heading"}>Skills <span className={"text-indigo-400"}>...</span></h1>
+                <h1 className={"heading"}>Skills<span className={"text-indigo-400"}>.</span></h1>
                 <p className={"subheading"}>A diverse toolkit of skills at my disposal</p>
 
                 <div>
@@ -211,7 +211,7 @@ export const Skills = () => {
                     </div>
 
 
-                    <h2 className={"dark:text-gray-200 text-gray-700 mt-10 mb-6"}>Frameworks</h2>
+                    <h2 className={"dark:text-gray-200 text-gray-700 mt-10 mb-6"}>Design</h2>
                     <div className={"grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5"}>
                         {
                             design.map((app, index) => {

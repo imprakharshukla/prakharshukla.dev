@@ -6,6 +6,9 @@ module.exports = {
     ],
     theme: {
         extend: {
+            backgroundImage: {
+                'bg': "url('/images/bg.png')",
+            },
             fontFamily: {
                 sans: ["Outfit", "ui-sans-serif"],
             },

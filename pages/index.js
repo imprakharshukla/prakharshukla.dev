@@ -9,6 +9,7 @@ import matter from "gray-matter";
 import Link from "next/link";
 import Image from "next/image";
 import {Blog} from "../components/blog";
+import {Contact} from "../components/contact";
 
 
 export async function getStaticProps() {
@@ -49,14 +50,16 @@ export async function getStaticProps() {
 }
 
 export default function Home({posts, projects}) {
-    console.log({projects})
-    return (<div>
+
+    return (
+        <div className={"space-y-10"}>
             <Landing/>
             <About/>
             <Projects projects={projects}/>
             <Qualifications/>
             <Skills/>
             <Blog posts={posts}/>
+            <Contact/>
         </div>
     )
 }

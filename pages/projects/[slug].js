@@ -14,7 +14,7 @@ export async function getStaticPaths() {
         },
 
     }));
-    console.log({paths})
+
     return {
         paths,
         fallback: false,
@@ -59,6 +59,6 @@ export default function ProjectPage({frontmatter, content}) {
 }
 
 const formatDate = (dateString) => {
-    console.log({dateString})
+
     return format(new Date(dateString), "do MMMM, yyyy")
 }

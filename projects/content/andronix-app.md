@@ -10,10 +10,6 @@ website: 'http://andronix.app'
 github: 'https://git.andronix.app'
 socialImage: 'images/projects/andronix_app_banner.png'
 date: '2023-01-04'
-images:
-  - images/projects/andronix_ss1.png
-  - images/projects/andronix_ss2.png
-  - images/projects/andronix_ss3.png
 tags:
   - android
   - linux

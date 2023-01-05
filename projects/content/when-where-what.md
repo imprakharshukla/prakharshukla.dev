@@ -10,10 +10,6 @@ website: 'http://whenwherewhat.me'
 github: 'https://whenwherewhat.me/git'
 socialImage: 'images/projects/wh3_app_banner.png'
 date: '2023-01-04'
-images:
-  - images/projects/andronix_ss1.png
-  - images/projects/andronix_ss2.png
-  - images/projects/andronix_ss3.png
 tags:
   - android
   - linux

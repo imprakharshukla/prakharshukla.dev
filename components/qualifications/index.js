@@ -105,7 +105,7 @@ export const Qualifications = () => {
 
 
                 <div className={"mt-10"}>
-                    <CtaButton title={"Download CV"} icon={HiDocumentText}/>
+                    <CtaButton link={"/files/Prakhar_Resume.pdf"} title={"Download Resume"} icon={HiDocumentText}/>
                 </div>
             </div>
         </div>

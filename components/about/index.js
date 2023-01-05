@@ -1,11 +1,12 @@
 import {CtaButton} from "../ctaButton";
 import {SiCodechef, SiGithub, SiLeetcode, SiLinkedin, SiTwitter} from "react-icons/si";
+import Link from "next/link";
 
 export const About = () => {
     return (
-        <div  id="about" className={"bg-gray-800"}>
+        <div id="about" className={"bg-gray-800"}>
             <div className={"py-10 px-10"}>
-                <h1 className={"heading"}>About me <span className={"text-indigo-400"}>...</span></h1>
+                <h1 className={"heading"}>About me<span className={"text-indigo-400"}>.</span></h1>
                 <p className={"subheading"}>I am a sophomore in Computer Science with a strong passion for technology
                     and software development. I have experience developing Android, Web, and Hybrid apps, and I am
                     always eager to learn and expand my skill-set. In addition to my coursework, I enjoy staying up to
@@ -19,42 +20,42 @@ export const About = () => {
                 <div className={"mt-10"}>
                     <div className={"hidden lg:block"}>
                         <div className={"flex flex-wrap justify-start items-center space-x-3"}>
-                            <CtaButton title={"LinkedIn"} icon={SiLinkedin}/>
-                            <CtaButton title={"GitHub"} icon={SiGithub}/>
-                            <CtaButton title={"CodeChef"} icon={SiCodechef}/>
-                            <CtaButton title={"Leetcode"} icon={SiLeetcode}/>
-                            <CtaButton title={"Twitter"} icon={SiTwitter}/>
+                            <CtaButton link={"/linkedin"} title={"LinkedIn"} icon={SiLinkedin}/>
+                            <CtaButton link={"/git"} title={"GitHub"} icon={SiGithub}/>
+                            <CtaButton link={"/cc"} title={"CodeChef"} icon={SiCodechef}/>
+                            <CtaButton link={"/lc"} title={"Leetcode"} icon={SiLeetcode}/>
+                            <CtaButton link={"/twitter"} title={"Twitter"} icon={SiTwitter}/>
                         </div>
                     </div>
 
 
                     <div className={"flex space-x-7 block justify-start items-center lg:hidden"}>
                         <p>Connect with me:</p>
-                        <a href="">
+                        <Link href="/linkedin">
                             <SiLinkedin
                                 className="cursor-pointer hover:-translate-y-1 hover:text-indigo-500 transition transform ease-in-out duration-200"
                                 size={27}/>
-                        </a>
-                        <a href="">
+                        </Link>
+                        <Link href="/git">
                             <SiGithub
                                 className="cursor-pointer hover:-translate-y-1 hover:text-indigo-500 transition transform ease-in-out duration-200"
                                 size={27}/>
-                        </a>
-                        <a href="">
+                        </Link>
+                        <Link href="/cc">
                             <SiCodechef
                                 className="cursor-pointer hover:-translate-y-1 hover:text-indigo-500 transition transform ease-in-out duration-200"
                                 size={27}/>
-                        </a>
-                        <a href="">
+                        </Link>
+                        <Link href="/lc">
                             <SiLeetcode
                                 className="cursor-pointer hover:-translate-y-1 hover:text-indigo-500 transition transform ease-in-out duration-200"
                                 size={27}/>
-                        </a>
-                        <a href="">
+                        </Link>
+                        <Link href="/twitter">
                             <SiTwitter
                                 className="cursor-pointer hover:-translate-y-1 hover:text-indigo-500 transition transform ease-in-out duration-200"
                                 size={27}/>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>
