@@ -11,22 +11,20 @@ export const Projects = ({projects}) => {
 
     useEffect(() => {
         fetch("https://gh-pinned-repos.egoist.dev/?username=imprakharshukla").then(res => res.json()).then(data => {
-
             setGithubProjects(data)
-            console.log({data})
         }).catch(err => {
-            console.log("err")
+            console.log(err)
         })
     }, []);
 
 
     return (
         <div id="projects" className={"bg-gray-900 bg-[url('/images/bg.png')] bg-top"}>
-            <div className={"py-10 px-10"}>
+            <div className={"py-10 px-10  container"}>
                 <h1 className={"heading"}>Projects<span className={"text-indigo-400"}>.</span></h1>
                 <p className={"subheading"}>Innovative creations that push the boundaries of what is possible</p>
 
-                <div className='mt-10 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5'>
+                <div className='mt-10 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5'>
                     {projects.length > 0 && projects.map(({slug, frontmatter}) => (<div
                         key={slug}
                         className='bg-gray-800 rounded-xl shadow-lg overflow-hidden flex flex-col hover:-translate-y-1 transform transition duration-200 ease-in-out'
@@ -57,7 +55,7 @@ export const Projects = ({projects}) => {
                 </div>
                 {
                     expandedView &&
-                    <div className='mt-10 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5'>
+                    <div className='mt-10 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5'>
                         {githubProjects.length > 0 && githubProjects.map((project, index) => {
                             return (
                                 <div className={""} key={index}>
@@ -71,7 +69,7 @@ export const Projects = ({projects}) => {
                                                 </div>
                                                 <div className={"px-5 py-5"}>
                                                     <p className={"font-bold text-lg text-gray-300 dark:text-gray-300"}>{project.repo}</p>
-                                                    <p className={"dark:text-gray-400 text-gray-300"}>{project.description}</p>
+                                                    <p className={"dark:text-gray-400 line-clamp-4 text-gray-300"}>{project.description}</p>
                                                     <div className={"mt-3"}>
                                                         <p className={"font-medium text-gray-400"}>Stars ⭐️
                                                             - <span>{project.stars}</span></p>

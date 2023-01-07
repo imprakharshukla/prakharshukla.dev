@@ -5,101 +5,97 @@ developer: 'Prakhar Shukla, Anurag Verma'
 metaTitle: 'Andronix App'
 platform: Android
 logo: 'images/projects/andronix_logo.png'
-metaDesc: ''
 website: 'http://andronix.app'
 github: 'https://git.andronix.app'
 socialImage: 'images/projects/andronix_app_banner.png'
 date: '2023-01-04'
+links:
+  - title: 'Play Store'
+    link: 'https://play.andronix.app'
+  - title: 'GitHub'
+    link: 'https://git.andronix.app'
 tags:
-  - android
-  - linux
-  - shell
+
+- android
+- linux
+- shell
 ---
 
+# What is Andronix App?
+Andronix helps you to install Linux distributions like Ubuntu, Debian, Manjaro, Kali etc. on un-rooted Android devices.
 
 # How does this work?
-Andronix is simple inside the hood (well not really, but most of it is simple to understand). Andronix uses **PRoot** to run your favourite Linux distribution on your Android devices.
 
+Andronix is simple inside the hood (well not really, but most of it is simple to understand). Andronix uses **PRoot** to
+run your favourite Linux distribution on your Android devices.
 
 ### What exactly is PRoot?
 
 As stated in the official website of PRoot
 
-> PRoot is a user-space implementation of **chroot, mount --bind, and binfmt_misc**. This means that users don't need any privileges or setup to do things like using an arbitrary directory as the new root file system, making files accessible somewhere else in the file system hierarchy, or executing programs built for another CPU architecture transparently through QEMU user-mode.
+> PRoot is a user-space implementation of **chroot, mount --bind, and binfmt_misc**. This means that users don't need
+> any privileges or setup to do things like using an arbitrary directory as the new root file system, making files
+> accessible somewhere else in the file system hierarchy, or executing programs built for another CPU architecture
+> transparently through QEMU user-mode.
 
 
-or in easier words, the benefits of enabling PRoot include running Linux operating systems in a Termux [chroot](https://en.m.wikipedia.org/wiki/Chroot) on an Android smartphone, tablet and Chromebook.
+or in easier words, the benefits of enabling PRoot include running Linux operating systems in a
+Termux [chroot](https://en.m.wikipedia.org/wiki/Chroot) on an Android smartphone, tablet and Chromebook.
 
-We use **Termux** to provide the command line and the packages that are especially compiled for Termux implemented inside Andronix.
+We use **Termux** to provide the command line and the packages that are especially compiled for Termux implemented
+inside Andronix
 
-# Get started now 🚀
-Hey! 😊, let's introduce to the basics of the documentations around here. This is the doc-hub for Andronix, from development to installations, you can find almost everything here. [Read the documentation here](https://docs.andronix.app)
+# My contribution to Andronix
 
-### Introduction Docs 📒
+### Android App
 
-Here you can find all the information necessary to understand Andronix better. Diving deep in **PRoot**, **app structure** and **Shell scripts** that actually make you understand about what's actually happening.
+- I have developed the entire Android app using Kotlin and the **Model-View-ViewModel (MVVM) architecture**. This modern
+  programming language, along with the powerful MVVM design pattern, has allowed me to create a scalable and
+  maintainable codebase for the app.
+- Utilized **Retrofit** to handle all API calls in our app. This popular HTTP client simplifies the process of making
+  network requests and allows for a more efficient and reliable communication with our backend servers.
+- Used Firebase Realtime Database and Firestore, and all the realtime listeners are handled using Kotlin's **StateFlow**
+  and **SharedFlow** which are passed to the ViewModel and then to the UI using Kotlin coroutines.
+- Andronix uses **Hilt**, a dependency injection library developed by Google, to efficiently manage and maintain the
+  dependencies within the app. The implementation of this software design pattern, along with Hilt's code generation and
+  testing support, results in a more robust and reliable user experience in Andronix.
+- I have created a wrapper around the **Google Play Billing library v5.0** to allow for easier integration of payments
+  in our app. By implementing this custom solution, I have been able to streamline the integration process and improve
+  the overall user experience when making payments within the app.
+- Implemented **single activity architecture** using **Jetpack Navigation Component**. This allows for a more efficient
+  and reliable user experience when navigating between different screens in the app.
 
-### Installation Docs 📱
-All and everything for you to get up and running with your favourite Linux Distribution. If you're seeking for help installing a distribution, this is place you need to be. [Read the installation docs](https://docs.andronix.app/installations/non-modded-os)
+### Frontend
 
-### Apps Installation 💻
-Here are the installation procedures of few most popular apps like **VS Code, IntelliJ Idea, GIMP, Blender** etc. Easy to follow and quick! [Read the app installation docs](https://docs.andronix.app/software/browsers)
+- I have developed the frontend of the Andronix app's websites using **NuxtJS** and **VueJS**, two popular JavaScript
+  libraries. I have also employed TailwindCSS for styling, resulting in a visually appealing and user-friendly website.
+  The combination of these technologies has allowed me to efficiently create and maintain the websites for our app
+- Completely re-designed the websites from scratch and implemented a **modular approach** in the coding process. This
+  systematic method of development has resulted in a more organized and efficient codebase, allowing for easier
+  maintenance and updates to the websites.
+- I have implemented automated **end-to-end testing** using **CypressJS** in order to ensure the quality and reliability
+  of the websites. This powerful testing tool allows me to simulate user actions and verify that the websites are
+  functioning as intended, ultimately improving the user experience.
+- Implemented **unit testing** using the popular libraries **chai** and **mocha** in order to thoroughly test the
+  individual components of the websites. This approach allows me to identify and fix any issues at the unit level,
+  resulting in a more robust and reliable website overall.
+- Added **Razorpay**, a payment gateway, to the websites in order to enable payments for our users. This integration
+  allows us to securely process transactions and expand the functionality of the websites.
 
-### Development Docs 👨‍💻
-Looking into contributing and developing things around or for Andronix? Here you can find all the required documentation regarding **termux-packages, app, scripts** or anything to development. *We are working on it 👷‍♂️*
+### Backend
 
-# What can you do with Andronix?
-Pretty much anything you like to do. You're just limited by the lack of the full Linux kernel, the SELinux policies of your Android versions, your CPU architecture and your device's hardware. We have users replacing their entire laptops and computer with Andronix. We are looking for something that can support web-browsing, coding or anything else that is not really taxing on your phone's hardware then you can use Andronix without any issues.
-
-You don't have to worry about multi-booting your system which means you can have all the Un-Modded and Modded OS installed at once. **12 OS at once given that you have the storage for it.** Install as many as you like, uninstall them when you're done.
-
-[Here's what you can't do on Andronix systems](https://docs.andronix.app/)
-
-## Is it free?
-
-Yes! ⚡ Andronix is completely **Ad-free** and all the Un-modded distros and **free to use as much as you want**.
-
-On the other hand [Modded OS](https://docs.andronix.app/installations/modded-os) are paid but they are very economical considering it is a **lifetime purchase with unlimited installs on unlimited devices.**  (We spend hours optimizing and packing it, and these are very large files which we need to serve requiring a massive amount of bandwidth, which costs money).
-
-You can also get **Andronix Premium** which is another way to support the developers. You also get a few perks including online sync with Andronix Commands and a web-app to access it from any device you want.
-
-
-# What OS are supported?
-Andronix currently supports 8 Un-Modded OS and 4 Modded OS at the moment.
-### Un-Modded OS
-1. Ubuntu
-2. Debian
-3. Manjaro
-4. Fedora
-5. Kali
-6. Void
-7. Alpine
-8. Arch
-
-### Desktop Environment
-1. LXDE
-2. LXQT
-3. XFCE
-
-### Windows Managers
-1. Awesome
-2. Openbox
-3. i3
-
-### Modded OS
-1. Ubuntu XFCE
-2. Debian XFCE
-3. Ubuntu KDE
-4. Manjaro XFCE
-
-
-
-# Are we open-source? 📖🔓
-
-
-Yes but no. Andronix is partially open-source. All the free distro tar files and the shell scripts are available on our [GitHub repository](https://github.com/andronixapp). While all the paid things, like the actual Android app and all the files concerning Andronix Modded OS are close-source for obvious reasons.
-
-That doesn't mean that we don't love open-source, **we** 💘 **open-source**. In fact if you're a developer or a maintainer of an open-source project, **we will be more than happy to provide you everything for free** for life. Just get-in touch with us and complete the process of verification😊.
-
-<br>
+- Developed the backend of Andronix to efficiently handle download requests at scale. The backend is powered by NodeJS (
+  using the **ExpressJS** and **NestJS** frameworks), **Firebase**, **Hasura** (using **GraphQL**), and **Apollo
+  GraphQL** for internal tooling. In order to ensure the quality and reliability of the backend, I have implemented
+  testing using **ChaiJS** and **MochaJS**.
+- Refactored the code to **Typescript** in order to improve the type safety and maintainability of the backend. This
+  effort has resulted in an increase in the test coverage to over 80%. Additionally, I have utilized the Firebase
+  emulators to increase the integration **test coverage from 0% to 78%**.
+- **Modularized the API** into Internal, Commerce, and Product APIs in order to improve the organization and
+  maintainability of the backend. This approach has allowed me to reduce the time spent on maintenance and more
+  efficiently manage the various components of the API
+- Transitioned the deployment of the backend from bare metal servers with **Nginx** as a load-balancer to the cloud
+  using Render. This decision has allowed for **improved scalability and reliability of the backend**. In order to
+  streamline the development process, I have also implemented CI/CD pipelines using **GitHub Actions** for **automated
+  unit and integration testing**, as well as **automated deployment**.
 

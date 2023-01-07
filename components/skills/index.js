@@ -9,7 +9,8 @@ import {
     SiJava,
     SiJavascript,
     SiKotlin,
-    SiMongodb, SiMysql,
+    SiMongodb,
+    SiMysql,
     SiNestjs,
     SiNextdotjs,
     SiNuxtdotjs,
@@ -155,8 +156,8 @@ export const Skills = () => {
 
 
     return (
-        <div className={"bg-gray-900"}  id="skills">
-            <div className={"py-10 px-10"}>
+        <div className={"bg-gray-900"} id="skills">
+            <div className={"py-10 px-10  container"}>
                 <h1 className={"heading"}>Skills<span className={"text-indigo-400"}>.</span></h1>
                 <p className={"subheading"}>A diverse toolkit of skills at my disposal</p>
 
@@ -184,8 +185,8 @@ export const Skills = () => {
                                 const Icon = framework.icon
                                 return (
                                     <a href={framework.website} target={"_blank"} rel={"noreferrer"}
-                                        className={"cursor-pointer hover:text-indigo-500 hover:scale-105 transition transform duration-200 ease-in-out bg-gray-800 p-4 rounded-md flex flex-col items-center justify-center"}
-                                        key={framework.name}>
+                                       className={"cursor-pointer hover:text-indigo-500 hover:scale-105 transition transform duration-200 ease-in-out bg-gray-800 p-4 rounded-md flex flex-col items-center justify-center"}
+                                       key={framework.name}>
                                         <Icon size={20}/>
                                         <p className={"mt-2 text-sm dark:text-gray-400 text-gray-500"}>{framework.name}</p>
                                     </a>
@@ -201,8 +202,8 @@ export const Skills = () => {
                                 const Icon = database.icon
                                 return (
                                     <a href={database.website} target={"_blank"} rel={"noreferrer"}
-                                        className={"cursor-pointer hover:text-indigo-500 hover:scale-105 transition transform duration-200 ease-in-out bg-gray-800 p-4 rounded-md flex flex-col items-center justify-center"}
-                                        key={database.name}>
+                                       className={"cursor-pointer hover:text-indigo-500 hover:scale-105 transition transform duration-200 ease-in-out bg-gray-800 p-4 rounded-md flex flex-col items-center justify-center"}
+                                       key={database.name}>
                                         <Icon size={20}/>
                                         <p className={"mt-2 text-sm dark:text-gray-400 text-gray-500"}>{database.name}</p>
                                     </a>
@@ -218,8 +219,8 @@ export const Skills = () => {
                                 const Icon = app.icon
                                 return (
                                     <a href={app.website} target={"_blank"} rel={"noreferrer"}
-                                        className={"cursor-pointer hover:text-indigo-500 hover:scale-105 transition transform duration-200 ease-in-out bg-gray-800 p-4 rounded-md flex flex-col items-center justify-center"}
-                                        key={app.name}>
+                                       className={"cursor-pointer hover:text-indigo-500 hover:scale-105 transition transform duration-200 ease-in-out bg-gray-800 p-4 rounded-md flex flex-col items-center justify-center"}
+                                       key={app.name}>
                                         <Icon size={20}/>
                                         <p className={"mt-2 text-sm dark:text-gray-400 text-gray-500"}>{app.name}</p>
                                     </a>

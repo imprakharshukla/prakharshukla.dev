@@ -5,7 +5,7 @@ import Link from "next/link";
 export const About = () => {
     return (
         <div id="about" className={"bg-gray-800"}>
-            <div className={"py-10 px-10"}>
+            <div className={"py-10 px-10  container"}>
                 <h1 className={"heading"}>About me<span className={"text-indigo-400"}>.</span></h1>
                 <p className={"subheading"}>I am a sophomore in Computer Science with a strong passion for technology
                     and software development. I have experience developing Android, Web, and Hybrid apps, and I am

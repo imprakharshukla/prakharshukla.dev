@@ -3,7 +3,7 @@ import Link from "next/link";
 export const NavBar = ({setIsDrawerOpen, isDrawerOpen}) => {
     return (
         <div className={"bg-gray-900 bg-opacity-90"}>
-            <div className={"mx-14"}>
+            <div className={"lg:mx-14 md:mx-8 mx-8"}>
                 <div className={"flex h-16 items-center justify-between"}>
                     <div className={"flex items-center"}>
                         <div className={"flex-shrink-0"}>
@@ -11,19 +11,19 @@ export const NavBar = ({setIsDrawerOpen, isDrawerOpen}) => {
                         </div>
                         <div className={"hidden lg:block"}>
                             <div className={"ml-10 flex items-baseline space-x-4  text-sm "}>
-                                <Link href={"#home"}
+                                <Link href={"/#home"}
                                       className={"bg-gray-900 text-white px-3 py-2 rounded-md font-medium"}>Home</Link>
-                                <Link href={"#about"}
+                                <Link href={"/#about"}
                                       className={"text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md  font-medium"}>About</Link>
-                                <Link href={"#skills"}
+                                <Link href={"/#skills"}
                                       className={"text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md font-medium"}>Skills</Link>
-                                <Link href={"#qualifications"}
+                                <Link href={"/#qualifications"}
                                       className={"text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md font-medium"}>Qualifications</Link>
-                                <Link href={"#projects"}
+                                <Link href={"/#projects"}
                                       className={"text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md font-medium"}>Projects</Link>
-                                <Link href={"#blog"}
+                                <Link href={"/#blog"}
                                       className={"text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md font-medium"}>Blog</Link>
-                                <Link href={"#contact"}
+                                <Link href={"/#contact"}
                                       className={"text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md font-medium"}>Contact
                                     Me</Link>
                             </div>

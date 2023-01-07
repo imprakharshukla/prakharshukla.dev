@@ -1,0 +1,16 @@
+---
+title: "Welcome to my blog"
+description: "Welcome to my tech and development blog! I hope you'll find something valuable here. Thank you for visiting!"
+author: "Prakhar Shukla"
+socialImage: "images/blogs/06-01-2023.png"
+date: "2023-01-06"
+tags:
+  - flutter
+  - android
+  - react native
+---
+
+# The main content
+
+Hello this is my blog
+> hello from the other side!

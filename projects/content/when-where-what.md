@@ -2,30 +2,40 @@
 name: When Where What
 description: 'Share a single link to users and support all calendars.'
 developer: 'Prakhar Shukla, Areeb Ur Rub'
-metaTitle: 'WhenWhereWhat App'
 logo: 'images/projects/wh3_logo.png'
 platform: Web
-metaDesc: ''
 website: 'http://whenwherewhat.me'
 github: 'https://whenwherewhat.me/git'
 socialImage: 'images/projects/wh3_app_banner.png'
 date: '2023-01-04'
+links:
+  - title: 'GitHub'
+    link: 'https://whenwherewhat.me/git'
 tags:
-  - android
-  - linux
-  - shell
+   - web
+   - calendar
+
 ---
 
-# Andronix App
+# What is When Where What?
 
-Hello this is my blog
+When Where What is a web app that allows you to share a single link to users and support all calendars. It is a simple
+and easy to use web app that allows you to create events and share them with your friends and family. It supports all
+major calendars like Google Calendar, Apple Calendar, Outlook Calendar, etc.
 
-> Hahahahahah
->
+# How does this work?
 
-```html
+Wh3 generates a simple link to your event, and you can share it with your friends and family. When they click on the link, a list of all the calendars supported by Wh3 will be shown. They can select any of the calendars and the event will be added to their calendar.
 
-<div>
-    <h1> Hello </h1>
-</div>
-```
+# My contribution to Wh3
+
+## Frontend
+ - We have used **NextJS**, a powerful JavaScript framework for server-rendered applications, and **TailwindCSS** for styling the frontend of our website. The combination of these technologies has allowed us to efficiently create and maintain a **visually appealing and user-friendly website.**
+ - We have created a **custom theme** for our website using TailwindCSS. This theme is used throughout the website and allows us to maintain a consistent look and feel across the website.
+ - I have implemented automated end-to-end tests using **Cypress** in order to ensure the quality and reliability of the front-end of our app. This powerful testing tool allows me to simulate user actions and verify that the app is functioning as intended, ultimately improving the user experience.
+
+## Backend
+ - We have chosen to use **MongoDB** as the database for our app. This NoSQL database is designed for scalability and flexibility, making it well-suited for modern application development.
+ - I have written the backend API for our app using **NextJS functions**, which utilize **AWS Lambda** to run serverless code. This approach allows us to efficiently build and scale the API while taking advantage of the cost and performance benefits of **serverless computing**.
+ - I have written unit tests for our app using **MochaJS** and **chaiJS**. These testing libraries allow me to simulate user actions and verify that the app is functioning as intended, ultimately improving the user experience.
+

@@ -2,6 +2,8 @@ import fs from 'fs';
 import matter from "gray-matter";
 import md from 'markdown-it'
 import {format} from 'date-fns'
+import Head from "next/head";
+
 
 export async function getStaticPaths() {
     const files = fs.readdirSync('blog/content');
@@ -29,8 +31,33 @@ export async function getStaticProps({params: {slug}}) {
 }
 
 export default function PostPage({frontmatter, content}) {
+    const URL = "https://prakharshukla.dev"
     return (
         <div className={""}>
+            <Head>
+
+                <title>{frontmatter.title}</title>
+                <meta name="description"
+                      content={frontmatter.description}/>
+
+
+                <meta property="og:url" content={`${URL}/${frontmatter.socialImage}`}/>
+                <meta property="og:type" content="website"/>
+                <meta property="og:title" content={frontmatter.title}/>
+                <meta property="og:description"
+                      content={frontmatter.description}/>
+                <meta property="og:image" content={`${URL}/${frontmatter.socialImage}`}/>
+
+
+                <meta name="twitter:card" content="summary_large_image"/>
+                <meta property="twitter:domain" content="prakharshukla.dev"/>
+                <meta property="twitter:url" content="https://prakharshukla.dev"/>
+                <meta name="twitter:title" content={frontmatter.title}/>
+                <meta name="twitter:description"
+                      content={frontmatter.description}/>
+                <meta name="twitter:image" content={`${URL}/${frontmatter.socialImage}`}/>
+
+            </Head>
             <div className={"flex justify-center items-center"}>
                 <img className={"object-cover opacity-80 h-96 w-full"} src={`/${frontmatter.socialImage}`} alt=""/>
             </div>

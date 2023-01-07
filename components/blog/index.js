@@ -3,11 +3,11 @@ import Image from "next/image";
 
 export const Blog = ({posts}) => {
     return (<div id="blog" className={"bg-gray-800"}>
-        <div className={"py-10 px-10"}>
+        <div className={"py-10 px-10 container"}>
             <h1 className={"heading"}>Blogs<span className={"text-indigo-400"}>.</span></h1>
             <p className={"subheading"}>Code and Creativity: A Symphony of Syntax and Style</p>
 
-            <div className='mt-10 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5'>
+            <div className='mt-10 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5'>
                 {
                     posts.length === 0 && <div>
                         <p className={"text-gray-400"}>No blogs for now. Please check back later :)</p>

@@ -40,6 +40,8 @@ export async function getStaticProps() {
         };
     });
 
+    console.log({posts})
+
     return {
         props: {
             posts,
@@ -51,7 +53,7 @@ export async function getStaticProps() {
 export default function Home({posts, projects}) {
 
     return (
-        <div className={"space-y-10"}>
+        <div className={""}>
             <Landing/>
             <About/>
             <Projects projects={projects}/>
