@@ -17,7 +17,6 @@ export const Projects = ({projects}) => {
         })
     }, []);
 
-
     return (
         <div id="projects" className={"bg-gray-900 bg-[url('/images/bg.png')] bg-top"}>
             <div className={"py-10 px-10  container"}>
