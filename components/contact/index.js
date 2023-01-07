@@ -49,7 +49,7 @@ export const Contact = () => {
         try {
             await validateFormData(data)
             console.log({data})
-            setFormData(data);
+
         } catch (error) {
             console.log(error)
             toast.error(error.message);
@@ -77,9 +77,6 @@ export const Contact = () => {
                 toast.error(error?.message || "Something went wrong")
             } finally {
                 recaptchaRef.current.reset();
-                setFormData({
-                    email: "", subject: "", message: ""
-                });
                 if (formRef) {
                     formRef.current.reset();
                 }
@@ -158,7 +155,7 @@ export const Contact = () => {
                         <div className={"mb-4"}>
                             <ReCAPTCHA
                                 ref={recaptchaRef}
-                                sitekey={"6LdYqtIjAAAAAGOAiamWUVWytlRxXaekAopf-83O"}/>
+                                sitekey={"6LcZqdsjAAAAAASfVe2bh_WSFIckLE6fyAlXEGvu"}/>
                         < /div>
 
 
