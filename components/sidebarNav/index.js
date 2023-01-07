@@ -24,21 +24,21 @@ export const SidebarNav = ({setIsDrawerOpen, isDrawerOpen}) => {
                 <div className="py-4 overflow-y-auto">
                     <ul className="space-y-2">
                         <li>
-                            <Link href="#home"
+                            <Link href="/#home"
                                   className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                 <RiHomeFill/>
                                 <span className="ml-3">Home</span>
                             </Link>
                         </li>
                         <li>
-                            <Link href="#skills"
+                            <Link href="/#skills"
                                   className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                 <RiUser4Fill/>
                                 <span className="flex-1 ml-3 whitespace-nowrap">Skills</span>
                             </Link>
                         </li>
                         <li>
-                            <Link href="#qualifications"
+                            <Link href="/#qualifications"
                                   className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                 <IoSchool/>
                                 <span className="flex-1 ml-3 whitespace-nowrap">Qualifications</span>
@@ -46,7 +46,7 @@ export const SidebarNav = ({setIsDrawerOpen, isDrawerOpen}) => {
                             </Link>
                         </li>
                         <li>
-                            <Link href="#projectw"
+                            <Link href="/#projectw"
                                   className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                 <RiCodeBoxFill/>
                                 <span className="flex-1 ml-3 whitespace-nowrap">Projects</span>
@@ -55,14 +55,14 @@ export const SidebarNav = ({setIsDrawerOpen, isDrawerOpen}) => {
                             </Link>
                         </li>
                         <li>
-                            <a href="#blog"
+                            <Link href="/#blog"
                                className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                 <RiBook2Fill/>
                                 <span className="flex-1 ml-3 whitespace-nowrap">Blog</span>
-                            </a>
+                            </Link>
                         </li>
                         <li>
-                            <Link href="#contact"
+                            <Link href="/#contact"
                                   className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
                                 <RiAtFill/>
                                 <span className="flex-1 ml-3 whitespace-nowrap">Contact Me</span>

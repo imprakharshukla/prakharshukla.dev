@@ -6,9 +6,9 @@ export const NavBar = ({setIsDrawerOpen, isDrawerOpen}) => {
             <div className={"lg:mx-14 md:mx-8 mx-8"}>
                 <div className={"flex h-16 items-center justify-between"}>
                     <div className={"flex items-center"}>
-                        <div className={"flex-shrink-0"}>
+                        <Link href={"/"} className={"flex-shrink-0"}>
                             <img src="/images/logo_dark.svg" className={"w-20"} alt="logo"/>
-                        </div>
+                        </Link>
                         <div className={"hidden lg:block"}>
                             <div className={"ml-10 flex items-baseline space-x-4  text-sm "}>
                                 <Link href={"/#home"}
