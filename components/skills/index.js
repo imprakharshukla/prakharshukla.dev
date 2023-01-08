@@ -157,7 +157,7 @@ export const Skills = () => {
 
     return (
         <div className={"bg-gray-900"} id="skills">
-            <div className={"py-10 px-10  container"}>
+            <div className={"py-10 px-10  container mx-auto "}>
                 <h1 className={"heading"}>Skills<span className={"text-indigo-400"}>.</span></h1>
                 <p className={"subheading"}>A diverse toolkit of skills at my disposal</p>
 

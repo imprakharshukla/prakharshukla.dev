@@ -37,7 +37,7 @@ export const Qualifications = () => {
     const [qualificationSelection, setQualificationSelection] = useState(0);
     return (
         <div  id="qualifications" className={"bg-gray-800"}>
-            <div className={"py-10 px-10  container"}>
+            <div className={"py-10 px-10  container mx-auto "}>
                 <h1 className={"heading"}>Qualifications<span className={"text-indigo-400"}>.</span></h1>
                 <p className={"subheading"}>Dedication to continuous learning and growth</p>
 

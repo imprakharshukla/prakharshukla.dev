@@ -90,10 +90,10 @@ export const Contact = () => {
     };
 
     return (<div id="contact" className={"bg-gray-900"}>
-            <div className={"py-10 px-10  container"}>
+            <div className={"py-10 px-10  container mx-auto "}>
                 <h1 className={"heading"}>Contact me<span className={"text-indigo-400"}>.</span></h1>
                 <p className={"subheading"}>Reach out to discuss potential projects, ask questions about my work, or
-                    just say hi!`/</p>
+                    just say hi!</p>
 
                 <div className={"max-w-md"}>
                     <form onSubmit={handleSubmit} ref={formRef}>

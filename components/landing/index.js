@@ -4,9 +4,9 @@ import {RiAtFill} from "react-icons/ri";
 
 export const Landing = () => {
     return (
-        <div id="home" className="bg-[url('/images/bg.png')] bg-center min-h-screen">
-            <div className='px-6 md:px-14 container'>
-                <div className='grid grid-cols-1 lg:grid-cols-2 items-center lg:h-screen justify-center md:justify-start mb-10 lg:mb-0'>
+        <div id="home" className="bg-[url('/images/bg.png')] bg-center">
+            <div className='px-6 md:px-14 container mx-auto'>
+                <div className='grid grid-cols-1 lg:grid-cols-2 items-center lg:py-32  justify-center md:justify-start mb-10 lg:mb-0'>
                     <div className={"order-2 lg:order-1"}>
                         <div className={"text-center md:text-start"}>
                             <div xyz="fade up stagger ease-in-out delay-10"

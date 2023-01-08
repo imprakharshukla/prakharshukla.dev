@@ -60,7 +60,6 @@ export default function Home({posts, projects}) {
                 <meta name="description"
                       content="Welcome to my portfolio! Lets make it happen."/>
 
-
                 <meta property="og:url" content={`${URL}/og_image.png`}/>
                 <meta property="og:type" content="website"/>
                 <meta property="og:title" content="Prakhar Shukla"/>

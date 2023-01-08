@@ -19,7 +19,7 @@ export const Projects = ({projects}) => {
 
     return (
         <div id="projects" className={"bg-gray-900 bg-[url('/images/bg.png')] bg-top"}>
-            <div className={"py-10 px-10  container"}>
+            <div className={"py-10 px-10  container mx-auto "}>
                 <h1 className={"heading"}>Projects<span className={"text-indigo-400"}>.</span></h1>
                 <p className={"subheading"}>Innovative creations that push the boundaries of what is possible</p>
 

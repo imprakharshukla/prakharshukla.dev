@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const Blog = ({posts}) => {
     return (<div id="blog" className={"bg-gray-800"}>
-        <div className={"py-10 px-10 container"}>
+        <div className={"py-10 px-10 container mx-auto "}>
             <h1 className={"heading"}>Blogs<span className={"text-indigo-400"}>.</span></h1>
             <p className={"subheading"}>Code and Creativity: A Symphony of Syntax and Style</p>
 
