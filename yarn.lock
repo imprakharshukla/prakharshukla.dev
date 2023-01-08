@@ -2116,6 +2116,11 @@
   "resolved" "https://registry.npmjs.org/path-type/-/path-type-4.0.0.tgz"
   "version" "4.0.0"
 
+"performance-now@^2.1.0":
+  "integrity" "sha512-7EAHlyLHI56VEIdK57uwHdHKIaAGbnXPiw0yWbarQZOKaKpvUIgW0jWRVLiatnM+XXlSwsanIBH/hzGMJulMow=="
+  "resolved" "https://registry.npmjs.org/performance-now/-/performance-now-2.1.0.tgz"
+  "version" "2.1.0"
+
 "picocolors@^1.0.0":
   "integrity" "sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ=="
   "resolved" "https://registry.npmjs.org/picocolors/-/picocolors-1.0.0.tgz"
@@ -2271,6 +2276,13 @@
   "resolved" "https://registry.npmjs.org/quick-lru/-/quick-lru-5.1.1.tgz"
   "version" "5.1.1"
 
+"raf@^3.4.0":
+  "integrity" "sha512-Sq4CW4QhwOHE8ucn6J34MqtZCeWFP2aQSmrlroYgqAV1PjStIhJXxYuTgUIfkEk7zTLjmIjLmU5q+fbD1NnOJA=="
+  "resolved" "https://registry.npmjs.org/raf/-/raf-3.4.1.tgz"
+  "version" "3.4.1"
+  dependencies:
+    "performance-now" "^2.1.0"
+
 "raw-body@^2.2.0":
   "integrity" "sha512-qqJBtEyVgS0ZmPGdCFPWJ3FreoqvG4MVQln/kCgF7Olq95IbOp0/BWyMwbdtn4VTvkM8Y7khCQ2Xgk/tcrCXig=="
   "resolved" "https://registry.npmjs.org/raw-body/-/raw-body-2.5.1.tgz"
@@ -2289,7 +2301,7 @@
     "hoist-non-react-statics" "^3.3.0"
     "prop-types" "^15.5.0"
 
-"react-dom@*", "react-dom@^18.2.0", "react-dom@>= 17", "react-dom@>=16", "react-dom@>=16.6.0", "react-dom@18.2.0":
+"react-dom@*", "react-dom@^17.x || ^18.x", "react-dom@^18.2.0", "react-dom@>= 17", "react-dom@>=16", "react-dom@>=16.6.0", "react-dom@18.2.0":
   "integrity" "sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-18.2.0.tgz"
   "version" "18.2.0"
@@ -2332,7 +2344,7 @@
     "loose-envify" "^1.4.0"
     "prop-types" "^15.6.2"
 
-"react@*", "react@^18.2.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@>= 17", "react@>=16", "react@>=16.4.1", "react@>=16.6.0", "react@18.2.0":
+"react@*", "react@^17.x || ^18.x", "react@^18.2.0", "react@>= 16.8.0 || 17.x.x || ^18.0.0-0", "react@>= 17", "react@>=16", "react@>=16.4.1", "react@>=16.6.0", "react@18.2.0":
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   "version" "18.2.0"
@@ -2777,6 +2789,14 @@
   "integrity" "sha512-Uz+dTXYzxXXbsFpM86Wh3dKCxrQqUcVMxwU54orwlJjOpO3ao8L7j5lH+dWfTwgCwIuM9GQ2kvVotzYJMXTBZg=="
   "resolved" "https://registry.npmjs.org/typescript/-/typescript-4.9.4.tgz"
   "version" "4.9.4"
+
+"typewriter-effect@^2.19.0":
+  "integrity" "sha512-rhUX1ukmAXNFWUnMFx8CDU1uLWJQ7pRYzDU7WfHJRq43i6SmWSP9vFiUsOGfXINodUAgZiJ5xnzwLciHxZDGDg=="
+  "resolved" "https://registry.npmjs.org/typewriter-effect/-/typewriter-effect-2.19.0.tgz"
+  "version" "2.19.0"
+  dependencies:
+    "prop-types" "^15.6.2"
+    "raf" "^3.4.0"
 
 "uc.micro@^1.0.1", "uc.micro@^1.0.5":
   "integrity" "sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA=="
