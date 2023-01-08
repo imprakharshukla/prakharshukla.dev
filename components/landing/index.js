@@ -26,7 +26,7 @@ export const Landing = () => {
                         </div>
                     </div>
                     <div className={"p-12 md:pl-0 order-1 lg:order-2 flex md:justify-start lg:justify-center justify-center items-center"}>
-                        <img className={"object-cover max-w-sm w-4/6 lg:w-11/12 md:w-1/3"}
+                        <img className={"object-cover animate max-w-sm w-4/6 lg:w-11/12 md:w-1/3"}
                              src={"/images/landing_dp.png"}/>
                     </div>
                 </div>

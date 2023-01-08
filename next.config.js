@@ -3,6 +3,12 @@ const nextConfig = {
     async redirects() {
         return [
             {
+                source: '/kofi',
+                destination: 'https://ko-fi.com/prakharshukla',
+                permanent: true,
+                basePath: false,
+            },
+            {
                 source: '/git',
                 destination: 'https://github.com/imprakharshukla',
                 permanent: true,
