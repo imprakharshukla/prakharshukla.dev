@@ -8,6 +8,7 @@ logo: 'images/projects/andronix_logo.png'
 website: 'http://andronix.app'
 github: 'https://git.andronix.app'
 socialImage: 'images/projects/andronix_app_banner.png'
+status: production
 date: '2023-01-04'
 links:
   - title: 'Play Store'

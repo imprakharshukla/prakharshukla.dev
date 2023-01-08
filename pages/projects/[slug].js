@@ -3,7 +3,7 @@ import matter from "gray-matter";
 import md from 'markdown-it'
 
 import {format} from 'date-fns'
-import {RiGithubFill, RiLinkM, RiUser4Fill} from "react-icons/ri";
+import {RiFlaskFill, RiGithubFill, RiLinkM, RiShieldCheckFill, RiTestTubeFill, RiUser4Fill} from "react-icons/ri";
 import {SiAppsignal} from "react-icons/si";
 import {CtaButton} from "../../components/ctaButton";
 import Link from "next/link";
@@ -35,6 +35,36 @@ export async function getStaticProps({params: {slug}}) {
         },
     };
 }
+
+const ProjectStatusComponent = ({status}) => {
+    if (status.toLowerCase().includes("Production".toLowerCase())) {
+        return (
+            <div
+                className={"px-3 bg-green-700 not-prose py-2 bg-opacity-20 flex justify-around items-center w-fit rounded-lg space-x-3"}>
+                <RiShieldCheckFill size={20} className={"text-green-600 text-2xl"}/>
+                <p className={"text-green-600"}>{status}</p>
+            </div>
+        )
+    } else if (status.toLowerCase().includes("Beta".toLowerCase())) {
+        return (
+            <div
+                className={"px-3 bg-yellow-700 not-prose py-2 bg-opacity-40 flex justify-around items-center w-fit rounded-lg space-x-3"}>
+                <RiTestTubeFill size={20} className={"text-yellow-600 text-2xl"}/>
+                <p className={"text-yellow-600"}>{status}</p>
+            </div>
+        )
+    } else if (status.toLowerCase().includes("Alpha".toLowerCase())) {
+        return (
+            <div
+                className={"px-3 bg-red-700 not-prose py-2 bg-opacity-30 flex justify-around items-center w-fit rounded-lg space-x-3"}>
+                <RiFlaskFill size={20} className={"text-red-600 text-2xl"}/>
+                <p className={"text-red-500"}>{status}</p>
+            </div>
+        )
+    }
+
+}
+
 
 export default function ProjectPage({frontmatter, content}) {
     const URL = "https://prakharshukla.dev"
@@ -80,7 +110,8 @@ export default function ProjectPage({frontmatter, content}) {
                         </div>
                     </div>
                     <CtaButton link={frontmatter.website} icon={SiAppsignal} title={"Demo"}/>
-                    <Link href={frontmatter.github} className={"rounded-full bg-gray-700 p-2 transform transition cursor-pointer hover:translate-x-1 duration-200 ease-in-out"}>
+                    <Link href={frontmatter.github}
+                          className={"rounded-full bg-gray-700 p-2 transform transition cursor-pointer hover:translate-x-1 duration-200 ease-in-out"}>
                         <RiGithubFill className={"text-white text-2xl"}/>
                     </Link>
                 </div>
@@ -95,6 +126,9 @@ export default function ProjectPage({frontmatter, content}) {
                             <div key={tag} className={"px-4 text-sm py-1 bg-gray-800 rounded-full"}>{tag}</div>
                         )
                     })}
+                </div>
+                <div className={"my-10"}>
+                    <ProjectStatusComponent status={frontmatter.status}/>
                 </div>
                 <div className={"mt-10"} dangerouslySetInnerHTML={{__html: md().render(content)}}/>
                 <h1 className={"mt-10"}>Important Links</h1>

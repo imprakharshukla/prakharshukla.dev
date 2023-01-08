@@ -7,6 +7,7 @@ platform: Web
 website: 'http://whenwherewhat.me'
 github: 'https://whenwherewhat.me/git'
 socialImage: 'images/projects/wh3_app_banner.png'
+status: early alpha
 date: '2023-01-04'
 links:
   - title: 'GitHub'
