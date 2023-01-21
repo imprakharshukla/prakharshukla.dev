@@ -22,7 +22,7 @@ export const Landing = () => {
 
 
                             <div className={"flex items-center justify-center md:justify-start"}>
-                                <p className='pt-6 flex text-lg font-medium text-gray-200 md:text-xl lg:text-2xl'>
+                                <span className='pt-6 flex text-lg font-medium text-gray-200 md:text-xl lg:text-2xl'>
                                     I make &nbsp;
                                     <Typewriter
                                         className={"inline"}
@@ -32,7 +32,7 @@ export const Landing = () => {
                                             loop: true,
                                         }}
                                     />&nbsp;apps.
-                                </p>
+                                </span>
                             </div>
 
 

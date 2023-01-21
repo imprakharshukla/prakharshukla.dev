@@ -16,16 +16,15 @@ export default async function handler(req, res) {
         }
 
         try {
-            const response = await fetch(
-                `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.SITE_SECRET}&response=${captcha}`,
-                {
-                    headers: {
-                        "Content-Type": "application/x-www-form-urlencoded; charset=utf-8",
-                    },
-                    method: "POST",
-                }
-            );
-            const captchaValidation = await response.json();
+            let formData = new FormData();
+            formData.append('secret', process.env.SITE_SECRET);
+            formData.append('response', captcha);
+            const url = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
+            const result = await fetch(url, {
+                body: formData,
+                method: 'POST',
+            });
+            const captchaValidation = await result.json();
             if (captchaValidation.success) {
                 try {
                     await sendMessageReceivedEmail({email, first_name, message})

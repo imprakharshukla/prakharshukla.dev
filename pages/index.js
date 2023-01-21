@@ -55,6 +55,7 @@ export default function Home({posts, projects}) {
     const URL = "https://prakharshukla.dev"
     return (
         <div className={""}>
+
             <Head>
                 <title>{"Prakhar Shukla"}</title>
                 <meta name="description"
@@ -76,6 +77,7 @@ export default function Home({posts, projects}) {
                       content={"Welcome to my portfolio! Lets make it happen."}/>
                 <meta name="twitter:image" content={`${URL}/og_image.png`}/>
             </Head>
+            <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
             <Landing/>
             <About/>
             <Projects projects={projects}/>
