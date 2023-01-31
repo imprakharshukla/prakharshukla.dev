@@ -13,6 +13,7 @@
     "@animxyz/react": "^0.6.7",
     "date-fns": "^2.29.3",
     "dotenv": "^16.0.3",
+    "framer-motion": "^8.5.5",
     "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
     "mailgun-js": "^0.22.0",

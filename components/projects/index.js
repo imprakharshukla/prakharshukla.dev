@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {RiGitBranchFill} from "react-icons/ri";
+import {motion} from "framer-motion";
 
 export const Projects = ({projects}) => {
 
@@ -24,21 +25,40 @@ export const Projects = ({projects}) => {
                 <p className={"subheading"}>Innovative creations that push the boundaries of what is possible</p>
 
                 <div className='mt-10 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5'>
-                    {projects.length > 0 && projects.map(({slug, frontmatter}) => (<div
-                        key={slug}
-                        className='bg-gray-800 rounded-xl shadow-lg overflow-hidden flex flex-col hover:-translate-y-1 transform transition duration-200 ease-in-out'
-                    >
-                        <Link href={`/projects/${slug}`}>
-                            <Image
-                                width={650}
-                                height={340}
-                                alt={frontmatter.title}
-                                src={`/${frontmatter.socialImage}`}
-                            />
-                            <h1 className='pt-4 px-4 font-bold text-lg'>{frontmatter.name}</h1>
-                            <h1 className='pt-2 px-4 pb-4 text-gray-400'>{frontmatter.description}</h1>
-                        </Link>
-                    </div>))}
+                    {projects.length > 0 && projects.map(({slug, frontmatter}, index
+                    ) => (
+                        <motion.div
+                            initial="hidden"
+                            whileInView="visible"
+                            variants={{
+                                visible: {
+                                    translateX: 0,
+                                    translateY: 0,
+                                    opacity: 1,
+                                },
+                                hidden: {
+                                    translateX: -100,
+                                    translateY: 0,
+                                    opacity: 0,
+                                }
+                            }}
+                            viewport={{once: true}} key={index}
+                            transition={{
+                                duration: 0.3, delay: index * 0.1
+                            }}
+                            className='bg-gray-800 rounded-xl shadow-lg overflow-hidden flex flex-col hover:-translate-y-1 transform transition duration-200 ease-in-out'
+                        >
+                            <Link href={`/projects/${slug}`}>
+                                <Image
+                                    width={650}
+                                    height={340}
+                                    alt={frontmatter.title}
+                                    src={`/${frontmatter.socialImage}`}
+                                />
+                                <h1 className='pt-4 px-4 text-white font-bold text-lg'>{frontmatter.name}</h1>
+                                <h1 className='pt-2 px-4 pb-4 text-gray-400'>{frontmatter.description}</h1>
+                            </Link>
+                        </motion.div>))}
                 </div>
                 <div className={"mt-10"}>
                     <button onClick={() => {

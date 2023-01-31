@@ -1,8 +1,24 @@
+//new
 import Link from "next/link";
+import {motion} from "framer-motion";
 
 export const NavBar = ({setIsDrawerOpen, isDrawerOpen}) => {
-    return (
-        <div className={"bg-gray-900 bg-opacity-90"}>
+    const links = [{
+        title: "Home", href: "/#home",
+    }, {
+        title: "About", href: "/#about",
+    }, {
+        title: "Skills", href: "/#skills",
+    }, {
+        title: "Projects", href: "/#projects",
+
+    }, {
+        title: "Blogs", href: "/#blogs",
+    }, {
+        title: "Contact", href: "/#contact",
+    },];
+
+    return (<div className={"bg-gray-900 bg-opacity-90"}>
             <div className={"lg:mx-14 md:mx-8 mx-8"}>
                 <div className={"flex h-16 items-center justify-between"}>
                     <div className={"flex items-center"}>
@@ -11,21 +27,28 @@ export const NavBar = ({setIsDrawerOpen, isDrawerOpen}) => {
                         </Link>
                         <div className={"hidden lg:block"}>
                             <div className={"ml-10 flex items-baseline space-x-4  text-sm "}>
-                                <Link href={"/#home"}
-                                      className={"bg-gray-900 text-white px-3 py-2 rounded-md font-medium"}>Home</Link>
-                                <Link href={"/#about"}
-                                      className={"text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md  font-medium"}>About</Link>
-                                <Link href={"/#skills"}
-                                      className={"text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md font-medium"}>Skills</Link>
-                                <Link href={"/#qualifications"}
-                                      className={"text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md font-medium"}>Qualifications</Link>
-                                <Link href={"/#projects"}
-                                      className={"text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md font-medium"}>Projects</Link>
-                                <Link href={"/#blog"}
-                                      className={"text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md font-medium"}>Blog</Link>
-                                <Link href={"/#contact"}
-                                      className={"text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md font-medium"}>Contact
-                                    Me</Link>
+                                {
+                                    links.map((link, index) => {
+                                        return (
+                                            <motion.div key={index}
+                                                        initial={{
+                                                            translateX: -50,
+                                                            translateY: -50,
+                                                            opacity: 0,
+                                                        }} animate={{
+                                                translateX: 0,
+                                                translateY: 0,
+                                                opacity: 1,
+                                            }} transition={{
+                                                duration: 0.3, delay: index * 0.05
+                                            }}>
+                                                <Link
+                                                    href={link.href}
+                                                    className={"bg-gray-900 text-white px-3 py-2 rounded-md font-medium"}> {link.title} < /Link>
+                                            </motion.div>
+                                        )
+                                    })
+                                }
                             </div>
                         </div>
                     </div>

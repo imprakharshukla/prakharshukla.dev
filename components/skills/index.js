@@ -22,6 +22,8 @@ import {
     SiTypescript,
     SiVuedotjs
 } from "react-icons/si";
+import {motion, useAnimation} from "framer-motion";
+import {useEffect} from "react";
 
 export const Skills = () => {
 
@@ -154,6 +156,7 @@ export const Skills = () => {
         }
     ]
 
+    const controls = useAnimation()
 
     return (
         <div className={"bg-gray-900"} id="skills">
@@ -168,12 +171,32 @@ export const Skills = () => {
                             languages.map((language, index) => {
                                 const Icon = language.icon
                                 return (
-                                    <a href={language.website} target={"_blank"} rel={"noreferrer"}
-                                       className={"cursor-pointer hover:text-indigo-500 hover:scale-105 transition transform duration-200 ease-in-out bg-gray-800 p-4 rounded-md flex flex-col items-center justify-center"}
-                                       key={language.name}>
-                                        <Icon size={20}/>
-                                        <p className={"mt-2 text-sm dark:text-gray-400 text-gray-500"}>{language.name}</p>
-                                    </a>
+                                    <motion.div
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        variants={{
+                                            visible: {
+                                                translateX: 0,
+                                                translateY: 0,
+                                                opacity: 1,
+                                            },
+                                            hidden: {
+                                                translateX: -50,
+                                                translateY: -50,
+                                                opacity: 0,
+                                            }
+                                        }}
+                                        viewport={{once: true}} key={index}
+                                        transition={{
+                                            duration: 0.3, delay: index * 0.05
+                                        }}>
+                                        <a href={language.website} target={"_blank"} rel={"noreferrer"}
+                                           className={"cursor-pointer hover:text-indigo-500 hover:scale-105 transition transform duration-200 ease-in-out bg-gray-800 p-4 rounded-md flex flex-col items-center justify-center dark:text-gray-200 text-gray-500"}
+                                           key={language.name}>
+                                            <Icon size={20}/>
+                                            <p className={"mt-2 text-sm dark:text-gray-400 text-gray-500"}>{language.name}</p>
+                                        </a>
+                                    </motion.div>
                                 )
                             })}
                     </div>
@@ -184,12 +207,32 @@ export const Skills = () => {
                             frameworks.map((framework, index) => {
                                 const Icon = framework.icon
                                 return (
-                                    <a href={framework.website} target={"_blank"} rel={"noreferrer"}
-                                       className={"cursor-pointer hover:text-indigo-500 hover:scale-105 transition transform duration-200 ease-in-out bg-gray-800 p-4 rounded-md flex flex-col items-center justify-center"}
-                                       key={framework.name}>
-                                        <Icon size={20}/>
-                                        <p className={"mt-2 text-sm dark:text-gray-400 text-gray-500"}>{framework.name}</p>
-                                    </a>
+                                    <motion.div
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        variants={{
+                                            visible: {
+                                                translateX: 0,
+                                                translateY: 0,
+                                                opacity: 1,
+                                            },
+                                            hidden: {
+                                                translateX: -50,
+                                                translateY: -50,
+                                                opacity: 0,
+                                            }
+                                        }}
+                                        viewport={{once: true}} key={index}
+                                        transition={{
+                                            duration: 0.3, delay: index * 0.05
+                                        }}>
+                                        <a href={framework.website} target={"_blank"} rel={"noreferrer"}
+                                           className={"cursor-pointer hover:text-indigo-500 hover:scale-105 transition transform duration-200 ease-in-out bg-gray-800 p-4 rounded-md flex flex-col items-center justify-center dark:text-gray-200 text-gray-500"}
+                                           key={framework.name}>
+                                            <Icon size={20}/>
+                                            <p className={"mt-2 text-sm dark:text-gray-400 text-gray-500"}>{framework.name}</p>
+                                        </a>
+                                    </motion.div>
                                 )
                             })}
                     </div>
@@ -201,12 +244,32 @@ export const Skills = () => {
                             databases.map((database, index) => {
                                 const Icon = database.icon
                                 return (
-                                    <a href={database.website} target={"_blank"} rel={"noreferrer"}
-                                       className={"cursor-pointer hover:text-indigo-500 hover:scale-105 transition transform duration-200 ease-in-out bg-gray-800 p-4 rounded-md flex flex-col items-center justify-center"}
-                                       key={database.name}>
-                                        <Icon size={20}/>
-                                        <p className={"mt-2 text-sm dark:text-gray-400 text-gray-500"}>{database.name}</p>
-                                    </a>
+                                    <motion.div
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        variants={{
+                                            visible: {
+                                                translateX: 0,
+                                                translateY: 0,
+                                                opacity: 1,
+                                            },
+                                            hidden: {
+                                                translateX: -50,
+                                                translateY: -50,
+                                                opacity: 0,
+                                            }
+                                        }}
+                                        viewport={{once: true}} key={index}
+                                        transition={{
+                                            duration: 0.3, delay: index * 0.05
+                                        }}>
+                                        <a href={database.website} target={"_blank"} rel={"noreferrer"}
+                                           className={"cursor-pointer hover:text-indigo-500 hover:scale-105 transition transform duration-200 ease-in-out bg-gray-800 p-4 rounded-md flex flex-col items-center justify-center dark:text-gray-200 text-gray-500"}
+                                        >
+                                            <Icon size={20}/>
+                                            <p className={"mt-2 text-sm dark:text-gray-400 text-gray-500"}>{database.name}</p>
+                                        </a>
+                                    </motion.div>
                                 )
                             })}
                     </div>
@@ -218,12 +281,32 @@ export const Skills = () => {
                             design.map((app, index) => {
                                 const Icon = app.icon
                                 return (
-                                    <a href={app.website} target={"_blank"} rel={"noreferrer"}
-                                       className={"cursor-pointer hover:text-indigo-500 hover:scale-105 transition transform duration-200 ease-in-out bg-gray-800 p-4 rounded-md flex flex-col items-center justify-center"}
-                                       key={app.name}>
-                                        <Icon size={20}/>
-                                        <p className={"mt-2 text-sm dark:text-gray-400 text-gray-500"}>{app.name}</p>
-                                    </a>
+                                    <motion.div
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        variants={{
+                                            visible: {
+                                                translateX: 0,
+                                                translateY: 0,
+                                                opacity: 1,
+                                            },
+                                            hidden: {
+                                                translateX: -50,
+                                                translateY: -50,
+                                                opacity: 0,
+                                            }
+                                        }}
+                                        viewport={{once: true}} key={index}
+                                        transition={{
+                                            duration: 0.3, delay: index * 0.05
+                                        }}>
+                                        <a href={app.website} target={"_blank"} rel={"noreferrer"}
+                                           className={"cursor-pointer hover:text-indigo-500 hover:scale-105 transition transform duration-200 ease-in-out bg-gray-800 p-4 rounded-md flex flex-col items-center justify-center dark:text-gray-200 text-gray-500"}
+                                           key={app.name}>
+                                            <Icon size={20}/>
+                                            <p className={"mt-2 text-sm dark:text-gray-400 text-gray-500"}>{app.name}</p>
+                                        </a>
+                                    </motion.div>
                                 )
                             })}
                     </div>

@@ -8,6 +8,7 @@ export const Contact = () => {
     const [loading, setLoading] = useState(false);
     const formRef = useRef(null);
     const [captchaToken, setCaptchaToken] = useState(null);
+    const turnstileRef = useRef(null);
 
     useEffect(() => {
 
@@ -40,6 +41,18 @@ export const Contact = () => {
     }
 
 
+    function resetCaptcha() {
+        if (turnstileRef.current) {
+            turnstileRef.current?.reset()
+        }
+    }
+
+    function onExpire() {
+        setCaptchaToken(null)
+        turnstileRef.current?.reset()
+    }
+
+
     const handleSubmit = async (event) => {
         setLoading(true)
         const fData = new FormData(event.currentTarget);
@@ -57,7 +70,7 @@ export const Contact = () => {
         } catch (error) {
             console.log(error)
             toast.error(error.message);
-            setLoading(true)
+            setLoading(false)
         }
         console.log({captchaToken})
 
@@ -79,6 +92,7 @@ export const Contact = () => {
                 toast.error(error?.message || "Something went wrong")
             } finally {
                 setCaptchaToken(null);
+                resetCaptcha()
                 setLoading(false)
             }
 
@@ -131,7 +145,8 @@ export const Contact = () => {
                         </div>
                         <div className="mb-4">
                             <label htmlFor="subject"
-                                   className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">What is this
+                                   className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">What is
+                                this
                                 about?</label>
                             <input type="text" id="subject"
                                    placeholder={"Subject..."}
@@ -154,10 +169,11 @@ export const Contact = () => {
                         <div className={"mb-4"}>
                             {
                                 <Turnstile
+                                    ref={turnstileRef}
                                     sitekey="0x4AAAAAAACFaH4Vby0ghcqz"
                                     onVerify={(token) => setCaptchaToken(token)}
                                     onError={(error) => toast.error(error)}
-                                    onExpire={() => setCaptchaToken(null)}
+                                    onExpire={onExpire}
                                     autoResetOnExpire={true}
                                 />
                             }

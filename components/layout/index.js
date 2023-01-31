@@ -7,7 +7,7 @@ export const Layout = ({children}) => {
 
     const [isDrawerOpen, setIsDrawerOpen] = useState(false);
     return (
-        <div>
+        <div className={"bg-gray-900"}>
             <SidebarNav isDrawerOpen={isDrawerOpen} setIsDrawerOpen={setIsDrawerOpen}/>
             <NavBar isDrawerOpen={isDrawerOpen} setIsDrawerOpen={setIsDrawerOpen}/>
 
