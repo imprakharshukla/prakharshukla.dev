@@ -4,7 +4,7 @@ const nextConfig = {
         return [
             {
                 source: '/kofi',
-                destination: 'https://ko-fi.com/prakharshukla',
+                destination: 'https://ko-fi.com/imprakharshukla',
                 permanent: true,
                 basePath: false,
             },
