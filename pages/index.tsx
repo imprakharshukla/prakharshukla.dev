@@ -4,54 +4,31 @@ import {About} from "../components/about";
 import {Projects} from "../components/projects";
 import {Qualifications} from "../components/qualifications";
 import {Skills} from "../components/skills";
-import fs from "fs";
-import matter from "gray-matter";
 import {Blog} from "../components/blog";
 import {Contact} from "../components/contact";
+import {Events} from "../components/events";
 import Head from "next/head";
+import {getAllEvents, getAllPosts, getAllProjects} from "../src/api";
 
 
 export async function getStaticProps() {
     /*Projects*/
-    const projectFiles = fs.readdirSync('projects/content');
-    const projects = projectFiles.map((fileName) => {
-
-
-        const slug = fileName.replace('.md', '');
-
-        const readFile = fs.readFileSync(`projects/content/${fileName}`, 'utf-8');
-        const {data: frontmatter} = matter(readFile);
-        return {
-            slug, frontmatter,
-        };
-    });
-
-
+    const projects = getAllProjects()
     /*Blogs*/
-    let files = fs.readdirSync('blog/content');
-    files = files.filter((file) => file !== "test.md")
-    console.log({files})
-    const posts = files.map((fileName) => {
-        const slug = fileName.replace('.md', '');
-
-        const readFile = fs.readFileSync(`blog/content/${fileName}`, 'utf-8');
-        const {data: frontmatter} = matter(readFile);
-        return {
-            slug, frontmatter,
-        };
-    });
-
-    console.log({posts})
+    const posts = getAllPosts()
+    /*Events*/
+    const events = getAllEvents()
 
     return {
         props: {
             posts,
-            projects
+            projects,
+            events
         },
     };
 }
 
-export default function Home({posts, projects}) {
+export default function Home({posts, projects, events}) {
     const URL = "https://prakharshukla.dev"
     return (
         <div className={""}>
@@ -82,6 +59,7 @@ export default function Home({posts, projects}) {
             <Projects projects={projects}/>
             <Qualifications/>
             <Skills/>
+            <Events events={events}/>
             <Blog posts={posts}/>
             <Contact/>
         </div>

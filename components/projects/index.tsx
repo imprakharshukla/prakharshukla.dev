@@ -3,11 +3,12 @@ import Link from "next/link";
 import Image from "next/image";
 import {RiGitBranchFill} from "react-icons/ri";
 import {motion} from "framer-motion";
+import {Project} from "../../d";
 
-export const Projects = ({projects}) => {
+export const Projects = ({projects}: { projects: Project[] }) => {
 
 
-    const [githubProjects, setGithubProjects] = useState({})
+    const [githubProjects, setGithubProjects] = useState<GitHubApiProjects[]>([])
     const [expandedView, setExpandedView] = useState(false)
 
     useEffect(() => {
@@ -25,7 +26,7 @@ export const Projects = ({projects}) => {
                 <p className={"subheading"}>Innovative creations that push the boundaries of what is possible</p>
 
                 <div className='mt-10 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-5'>
-                    {projects.length > 0 && projects.map(({slug, frontmatter}, index
+                    {projects.length > 0 && projects.map(({content, meta}, index
                     ) => (
                         <motion.div
                             initial="hidden"
@@ -48,15 +49,15 @@ export const Projects = ({projects}) => {
                             }}
                             className='bg-gray-800 rounded-xl shadow-lg overflow-hidden flex flex-col hover:-translate-y-1 transform transition duration-200 ease-in-out'
                         >
-                            <Link href={`/projects/${slug}`}>
+                            <Link href={`/projects/${meta.slug}`}>
                                 <Image
                                     width={650}
                                     height={340}
-                                    alt={frontmatter.title}
-                                    src={`/${frontmatter.socialImage}`}
+                                    alt={meta.name}
+                                    src={`/${meta.socialImage}`}
                                 />
-                                <h1 className='pt-4 px-4 text-white font-bold text-lg'>{frontmatter.name}</h1>
-                                <h1 className='pt-2 px-4 pb-4 text-gray-400'>{frontmatter.description}</h1>
+                                <h1 className='pt-4 px-4 text-white font-bold text-lg'>{meta.name}</h1>
+                                <h1 className='pt-2 px-4 pb-4 text-gray-400'>{meta.excerpt}</h1>
                             </Link>
                         </motion.div>))}
                 </div>
@@ -109,4 +110,18 @@ export const Projects = ({projects}) => {
             </div>
         </div>
     )
+}
+
+
+interface GitHubApiProjects {
+    owner: string,
+    repo: string,
+    description: string,
+    link: string,
+    image: string,
+    website: string,
+    stars: number,
+    forks: number,
+    language: string,
+    languageColor: string,
 }
