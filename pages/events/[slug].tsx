@@ -1,6 +1,7 @@
 import {format} from 'date-fns'
 import Head from "next/head";
 import {EventMeta, Post} from "../../d";
+import {Event} from "../../d";
 import {getEventBySlug} from "../../src/api";
 import fs from "fs";
 import {serialize} from "next-mdx-remote/serialize";
@@ -13,7 +14,7 @@ import Alert from "../../components/alert";
 import {RiMapPin2Fill, RiUser4Fill} from "react-icons/ri";
 
 interface MDXEvent {
-    source: MDXRemoteSerializeResult<Record<string, unknown>>,
+    mdxSource: MDXRemoteSerializeResult<Record<string, unknown>>,
     meta: EventMeta
 }
 
@@ -32,7 +33,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({params: {slug}}) {
-    const {content, meta}: Post = getEventBySlug(slug)
+    const {content, meta}: Event = getEventBySlug(slug)
     const mdxSource = await serialize(content, {
         mdxOptions: {
             development: process.env.NODE_ENV === "development",

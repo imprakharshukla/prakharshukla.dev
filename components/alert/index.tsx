@@ -1,6 +1,6 @@
 import {RiCheckboxCircleLine, RiErrorWarningLine, RiInformationLine} from "react-icons/ri";
 
-export default function Alert({type, children}: { type: "success" | "error" | "info" | "warning" }) {
+export default function Alert({type, children}: { type: "success" | "error" | "info" | "warning", children: any }) {
     const classes = getSecondaryPrimaryColors(type)
     return (
         <div

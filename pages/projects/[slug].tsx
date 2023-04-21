@@ -7,7 +7,7 @@ import {CtaButton} from "../../components/ctaButton";
 import Link from "next/link";
 import Head from "next/head";
 import {MDXRemote, MDXRemoteSerializeResult} from "next-mdx-remote";
-import {Post, ProjectMeta} from "../../d";
+import {Post, Project, ProjectMeta} from "../../d";
 import {getPostBySlug, getProjectBySlug} from "../../src/api";
 import {serialize} from "next-mdx-remote/serialize";
 import rehypeSlug from "rehype-slug";
@@ -17,7 +17,7 @@ import Alert from "../../components/alert";
 
 
 interface MDXProject {
-    source: MDXRemoteSerializeResult<Record<string, unknown>>,
+    mdxSource: MDXRemoteSerializeResult<Record<string, unknown>>,
     meta: ProjectMeta
 }
 
@@ -36,7 +36,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({params: {slug}}) {
-    const {content, meta}: Post = getProjectBySlug(slug)
+    const {content, meta}: Project = getProjectBySlug(slug)
     const mdxSource = await serialize(content, {
         mdxOptions: {
             rehypePlugins: [

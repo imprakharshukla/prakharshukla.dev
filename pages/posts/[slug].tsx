@@ -12,7 +12,7 @@ import "highlight.js/styles/atom-one-dark.css";
 import Alert from "../../components/alert";
 
 interface MDXPost {
-    source: MDXRemoteSerializeResult<Record<string, unknown>>,
+    mdxSource: MDXRemoteSerializeResult<Record<string, unknown>>,
     meta: Meta
 }
 
