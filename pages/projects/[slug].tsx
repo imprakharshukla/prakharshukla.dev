@@ -159,7 +159,7 @@ export default function ProjectPage({mdxSource, meta}: MDXProject) {
                 <div className={"grid grid-flow-row gap-6"}>{
                     meta.links.map((link) => {
                         return (
-                            <div className={"flex gap-3 flex-wrap items-center "}>
+                            <div key={link.link} className={"flex gap-3 flex-wrap items-center "}>
                                 <div
                                     className={
                                         "my-2 rounded-lg bg-gray-300 px-3 py-1.5 break-all text-gray-500 dark:bg-gray-800 dark:text-gray-400"
