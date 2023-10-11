@@ -29,11 +29,11 @@ export const About = () => {
                     </div>
 
 
-                    <div className={"flex space-x-7 block justify-start items-center lg:hidden"}>
+                    <div className={"flex space-x-7 block justify-start items-center lg:hidden dark:text-gray-100"}>
                         <p>Connect with me:</p>
                         <Link href="/linkedin">
                             <SiLinkedin
-                                className="cursor-pointer hover:-translate-y-1 hover:text-indigo-500 transition transform ease-in-out duration-200"
+                                className="cursor-pointer hover:-translate-y-1 hover:text-indigo-500 transition transform ease-in-out duration-200 "
                                 size={27}/>
                         </Link>
                         <Link href="/git">

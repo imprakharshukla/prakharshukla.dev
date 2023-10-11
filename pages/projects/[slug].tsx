@@ -7,8 +7,8 @@ import {CtaButton} from "../../components/ctaButton";
 import Link from "next/link";
 import Head from "next/head";
 import {MDXRemote, MDXRemoteSerializeResult} from "next-mdx-remote";
-import {Post, Project, ProjectMeta} from "../../d";
-import {getPostBySlug, getProjectBySlug} from "../../src/api";
+import {Project, ProjectMeta} from "../../d";
+import {getProjectBySlug} from "../../src/api";
 import {serialize} from "next-mdx-remote/serialize";
 import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
@@ -121,7 +121,7 @@ export default function ProjectPage({mdxSource, meta}: MDXProject) {
                 </div>
 
                 <h1 className="">{meta.name}</h1>
-                <div className={"flex justify-start items-center space-x-3 -my-3"}>
+                <div className={"flex justify-start flex-wrap items-center gap-3 -my-3"}>
                     <div className={"rounded-md flex-col"}>
                         <div
                             className={
@@ -142,7 +142,7 @@ export default function ProjectPage({mdxSource, meta}: MDXProject) {
                     <RiUser4Fill/>
                     <p className={"pl-2 text-sm"}>{meta.developer}</p>
                 </div>
-                <div className={"flex space-x-3"}>
+                <div className={"flex flex-wrap gap-3"}>
                     {meta.tags.map((tag) => {
                         return (
                             <div key={tag} className={"px-4 text-sm py-1 bg-gray-800 rounded-full"}>{tag}</div>
@@ -159,15 +159,13 @@ export default function ProjectPage({mdxSource, meta}: MDXProject) {
                 <div className={"grid grid-flow-row gap-6"}>{
                     meta.links.map((link) => {
                         return (
-                            <div key={link.link} className={"flex justify-start items-center space-x-3 -my-3"}>
-                                <div className={"rounded-md flex-col"}>
-                                    <div
-                                        className={
-                                            "line-clamp-1 my-2 w-fit rounded-lg bg-gray-300 px-3 py-2 text-gray-500 dark:bg-gray-800 dark:text-gray-400"
-                                        }
-                                    >
-                                        {link.link}
-                                    </div>
+                            <div className={"flex gap-3 flex-wrap items-center "}>
+                                <div
+                                    className={
+                                        "my-2 rounded-lg bg-gray-300 px-3 py-1.5 break-all text-gray-500 dark:bg-gray-800 dark:text-gray-400"
+                                    }
+                                >
+                                    {link.link}
                                 </div>
                                 <CtaButton link={link.link} icon={RiLinkM} title={link.title}/>
                             </div>
