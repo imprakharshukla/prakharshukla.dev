@@ -9,7 +9,7 @@ import Script from "next/script";
 
 function MyApp({Component, pageProps}) {
     return (
-        <ThemeProvider attribute="class">
+        <ThemeProvider attribute="class" forcedTheme="dark">
             <Head>
                 <link rel="shortcut icon" href="/images/favicon.ico"/>
                 <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png"/>
