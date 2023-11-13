@@ -12,7 +12,7 @@ export const Projects = ({projects}: { projects: Project[] }) => {
     const [expandedView, setExpandedView] = useState(false)
 
     useEffect(() => {
-        fetch("https://gh-pinned-repos.egoist.dev/?username=imprakharshukla").then(res => res.json()).then(data => {
+        fetch("https://gh-pinned-repos--master.deno.dev/?username=imprakharshukla").then(res => res.json()).then(data => {
             setGithubProjects(data)
         }).catch(err => {
             console.log(err)
